@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'logstash-filter-dynamodb'
-  s.version         = '0.0.2'
+  s.version         = '0.0.3'
   s.licenses = ['Apache License (2.0)']
   s.summary = "This plugin unmarshals a DynamoDB stream message and populates the corresponding ElasticSearch fields so the get indexed properly "
   s.description = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"
