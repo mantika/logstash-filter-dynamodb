@@ -71,17 +71,16 @@ end
 	event['eventName'] = doc[:eventName]
 
 	keys = {}
-	doc[:dynamodb][:keys].each do |key, value|
+	doc[:dynamodb][:Keys].each do |key, value|
 		keys[key.to_s] = @unmarshaller.format(value)
 	end
 	event['keys'] = keys
 
-	if doc[:dynamodb][:newImage]
-		doc[:dynamodb][:newImage].each do |key, value|
+	if doc[:dynamodb][:NewImage]
+		doc[:dynamodb][:NewImage].each do |key, value|
 			event[key.to_s] = @unmarshaller.format(value)
 		end
 	end
-
     filter_matched(event)
   end
 end
